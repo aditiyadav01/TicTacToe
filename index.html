@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 min-h-screen flex flex-col items-center justify-center p-4">
+  <h1 class="text-5xl font-bold mb-6 text-white tracking-widest uppercase">Tic Tac Toe</h1>
+
+  <!-- Scoreboard -->
+  <div id="scoreboard" class="mb-4 text-xl font-medium text-gray-200">
+    <span id="scoreX">X: 0</span> | <span id="scoreO">O: 0</span>
+  </div>
+
+  <!-- Turn Indicator -->
+  <div id="turnIndicator" class="mb-4 text-lg font-semibold text-gray-300">Turn: X</div>
+
+  <!-- Game Board -->
+  <div id="board" class="grid grid-cols-3 gap-2">
+    <!-- Game cells rendered via JS -->
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="mt-6 space-x-4">
+    <button onclick="resetGame()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Restart</button>
+    <button onclick="newMatch()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">New Match</button>
+  </div>
+
+  <!-- Result Modal -->
+  <div id="resultModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
+    <div class="bg-white p-6 rounded-xl shadow-xl text-center">
+      <h2 id="resultText" class="text-2xl font-bold mb-4"></h2>
+      <button onclick="closeModal()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Play Again</button>
+    </div>
+  </div>
+
+  <!-- JavaScript Logic -->
+  <script src="index.js"></script>
+</body>
+</html>
